@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     title: "Quinoa Salad with Vegetables",
     description:
       "This quinoa salad is fresh and nutritious, perfect for a light meal or as a side dish. Quinoa, rich in protein and fiber, is combined with a variety of fresh vegetables and a lemon vinaigrette.",
@@ -36,6 +37,7 @@ export default [
     },
   },
   {
+    id: 2,
     title: "Rigatoni with Panko",
     description:
       "Rigatoni with Panko is a flavorful Italian dish featuring al dente pasta baked with a crispy, golden panko breadcrumb topping, often seasoned with garlic, herbs, and Parmesan.",
@@ -71,6 +73,7 @@ export default [
     },
   },
   {
+    id: 3,
     title: "",
     description: "",
     preparation: {
@@ -90,6 +93,7 @@ export default [
     },
   },
   {
+    id: 4,
     title: "",
     description: "",
     preparation: {
@@ -109,6 +113,7 @@ export default [
     },
   },
   {
+    id: 5,
     title: "",
     description: "",
     preparation: {
