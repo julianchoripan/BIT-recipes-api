@@ -109,7 +109,7 @@ export default [
       "Adding Vegetables and Liquids: 1. Add 100g of grated carrot and 2 cans (400g each) of chopped tomatoes. 2. Pour in 400ml of beef stock and stir well.",
       "Simmering the Sauce: Bring the mixture to a simmer. Reduce the heat and let it cook gently for 45 minutes, stirring occasionally.",
       "Cooking the Pasta: Cook 400g of spaghetti according to the package instructions. Drain and mix with the sauce. Serve hot.",
-      ],
+    ],
     ingredients: [
       "2 tbsp olive oil.",
       "2 garlic cloves, minced.",
@@ -118,7 +118,8 @@ export default [
       "2 cans (400g each) chopped tomatoes.",
       "400ml beef stock.",
       "400ml beef stock.",
-      "Salt and pepper to taste."],
+      "Salt and pepper to taste.",
+    ],
     nutritionalValues: {
       calories: "787Kca.",
       carbohydrates: "103g (of which 19g sugars).",
