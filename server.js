@@ -1,4 +1,4 @@
-import recipes from "./recipes.js";
+import controllers from "./controllers/recipesController.js";
 import express from "express";
 
 const app = express();
@@ -7,11 +7,10 @@ const app = express();
 
 //rutas
 //retornar listado completo de recetas
-app.get("/api/recipes/all", (req, res) => {
-  return res.json(recipes);
-});
+app.get("/api/recipes/all", controllers.getAllRecipes);
 
 //retornar una receta por ID
+app.get("/api/recipes/:id", controllers.getRecipeById);
 
 //crear una receta
 
