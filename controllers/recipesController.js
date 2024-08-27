@@ -1,4 +1,5 @@
-import recipes from "../recipes.js";
+import database from "../recipes.js";
+let recipes = [...database];
 import { validationResult } from "express-validator";
 //obtener el listado de recetas
 function getAllRecipes(req, res) {
@@ -61,5 +62,4 @@ export default {
   getAllRecipes,
   getRecipeById,
   DestroyRecipe: DestroyRecipe,
-  createRecipe: createRecipe,
 };

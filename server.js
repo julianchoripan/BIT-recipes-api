@@ -9,10 +9,15 @@ app.use(express.json());
 //rutas
 app.use(recipeRouter);
 
-//Respuesta a rutas no válida
-app.get("*", (req, res) => {
-  res.status(404).json("Not found");
-});
+//retornar una receta por ID
+app.get("/api/recipes/:id", controllers.getRecipeById);
+
+//crear una receta
+
+//editar una receta por ID
+
+//borrar una receta por ID
+app.delete("/api/recipes/:id", controllers.DestroyRecipe);
 //servidor en escucha
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
