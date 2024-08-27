@@ -17,7 +17,8 @@ app.get("/api/recipes/:id", controllers.getRecipeById);
 //editar una receta por ID
 
 //borrar una receta por ID 
-app.delete("/api/recipes/:id", controllers.DestroyRecipe);
+app.delete("/api/recipes/:id", controllers.destroyRecipe);
+
 //servidor en escucha 
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");

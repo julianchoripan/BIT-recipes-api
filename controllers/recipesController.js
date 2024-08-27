@@ -1,4 +1,5 @@
-import recipes from "../recipes.js";
+import database from "../recipes.js";
+let recipes = [...database];
 
 //obtener el listado de recetas
 function getAllRecipes(req, res) {
@@ -16,28 +17,29 @@ function getRecipeById(req, res) {
   return res
     .status(404)
     .json(`No se encontró ninguna receta con el id: ${recipeId}`);
-};
+}
 //crear receta
 
 //editar receta por id
 
 //borrar receta por id
-function DestroyRecipe(req,res){
- const Destroy = Number(req.params.id);
- const Newarray = [];
- for (const recipe of recipes) {
-   if (recipe.id === recipes) {
-    Newarray.push(recipes);
-   }};
- recipes = Newarray;
- return res.json({
-   message: `Has eliminado un producto con exito ${req.params.id}`,
- });
-};
+function destroyRecipe(req, res) {
+  const recipeId = Number(req.params.id);
+  const newArray = [];
+  for (const recipe of recipes) {
+    if (recipe.id !== recipeId) {
+      newArray.push(recipe);
+    }
+  }
+  recipes = newArray;
+  return res.json({
+    message: `Has eliminado un producto con éxito: ${req.params.id}`,
+  });
+}
 
 //exportación
 export default {
   getAllRecipes,
-  getRecipeById, 
-  DestroyRecipe: DestroyRecipe,
+  getRecipeById,
+  destroyRecipe,
 };
