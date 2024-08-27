@@ -16,15 +16,28 @@ function getRecipeById(req, res) {
   return res
     .status(404)
     .json(`No se encontró ninguna receta con el id: ${recipeId}`);
-}
+};
 //crear receta
 
 //editar receta por id
 
 //borrar receta por id
+function DestroyRecipe(req,res){
+ const Destroy = Number(req.params.id);
+ const Newarray = [];
+ for (const recipe of recipes) {
+   if (recipe.id === recipes) {
+    Newarray.push(recipes);
+   }};
+ recipes = Newarray;
+ return res.json({
+   message: `Has eliminado un producto con exito ${req.params.id}`,
+ });
+};
 
 //exportación
 export default {
   getAllRecipes,
-  getRecipeById,
+  getRecipeById, 
+  DestroyRecipe: DestroyRecipe,
 };
