@@ -6,6 +6,7 @@ const router = express.Router();
 
 //retornar listado completo de recetas
 router.get("/api/recipes", recipesController.getAllRecipes);
+
 //retornar una receta por ID
 router.get("/api/recipes/:id", recipesController.getRecipeById);
 
@@ -15,7 +16,9 @@ router.post(
   recipeValidation.create,
   recipesController.createRecipe
 );
+
 //editar una receta por ID
+router.patch("/api/recipes/:id", recipesController.editRecipe)
 
 //borrar una receta por ID
 router.delete("/api/recipes/:id", recipesController.destroyRecipe);

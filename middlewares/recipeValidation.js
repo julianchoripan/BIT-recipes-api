@@ -16,4 +16,5 @@ const recipeValidation = {
       .isString("El valor Description debe ser un string"),
   ],
 };
+
 export default recipeValidation;

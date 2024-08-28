@@ -13,6 +13,7 @@ app.use(recipeRouter);
 app.get("*", (req, res) => {
   res.status(404).json("Not found");
 });
+
 //servidor en escucha
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
