@@ -43,17 +43,17 @@ function createRecipe(req, res) {
 //editar receta por id
 
 //borrar receta por id
-function DestroyRecipe(req, res) {
-  const Destroy = Number(req.params.id);
-  const Newarray = [];
+function destroyRecipe(req, res) {
+  const recipeId = Number(req.params.id);
+  const newArray = [];
   for (const recipe of recipes) {
-    if (recipe.id === recipes) {
-      Newarray.push(recipes);
+    if (recipe.id !== recipeId) {
+      newArray.push(recipe);
     }
   }
-  recipes = Newarray;
+  recipes = newArray;
   return res.json({
-    message: `Has eliminado un producto con exito ${req.params.id}`,
+    message: `Has eliminado un producto con éxito: ${req.params.id}`,
   });
 }
 
@@ -61,5 +61,6 @@ function DestroyRecipe(req, res) {
 export default {
   getAllRecipes,
   getRecipeById,
-  DestroyRecipe: DestroyRecipe,
+  destroyRecipe: destroyRecipe,
+  createRecipe: createRecipe,
 };

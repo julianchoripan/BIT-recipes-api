@@ -5,9 +5,9 @@ import recipesController from "../controllers/recipesController.js";
 const router = express.Router();
 
 //retornar listado completo de recetas
-router.get("/api/recipes/all", recipesController.getAllRecipes);
+router.get("/api/recipes", recipesController.getAllRecipes);
 //retornar una receta por ID
-//router.get("/api/recipes/:id", recipesControllers.getRecipeById);
+router.get("/api/recipes/:id", recipesController.getRecipeById);
 
 //crear una receta
 router.post(
@@ -18,6 +18,6 @@ router.post(
 //editar una receta por ID
 
 //borrar una receta por ID
-//router.delete("/api/recipes/:id", recipeControllers.DestroyRecipe);
+router.delete("/api/recipes/:id", recipesController.destroyRecipe);
 
 export default router;
